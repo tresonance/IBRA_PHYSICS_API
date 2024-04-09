@@ -15,6 +15,7 @@ media/
 *.sql*
 temp*
 Tex*
+obj
 .bash*
 main.cpp-e
 video-course-geometry
