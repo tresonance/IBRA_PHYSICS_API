@@ -272,7 +272,7 @@ then
 
         $(sed -i -e "s/.*sc.tm.leconTitle.setString.*/sc.tm.leconTitle.setString\( ${LECON_TITLE} \);/" main.cpp )
         
-        if [ "$?" != 0  ];
+        if [ "$?" != 0  ]; 
         then
             echo -e "\033[0;31m [WARNING]: Unable to set LECON_TITLE = $LECON_TITLE  inside  main.cpp script  \033[0m \n"		
             

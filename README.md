@@ -39,7 +39,7 @@ video_trigo_all_courses.py ...</h4></br>
 			example:<pre>source MANIM/run_manim_script.sh MANIM/c1_pesenteur-tir-tendu.py  OR    source run.sh MANIM_DIR/mypython_script.py </pre>
 			<div><img src="imgs_readme/conteneur.png" /></div>
 			you can see the script has three scenes, so i choose to run the first(aka 1).
-			<br/>The script run inside container and after i get the mp4 file with sharing volumes with the host (here host "media" directory), so i open it: <pre>open MANIM/media/videos/c1_eq_parametrique_droite/720p30/Equation_Parametrique_Line_1.mp4</pre>
+			<br/>The script run inside container and after i get the mp4 file with sharing volumes with the host (here host "media" directory), so i open it: <pre>open media/videos/c1_pesenteur-tir-tendu/720p30/ProjectileParaboleTirTendu.mp4 </pre>
 			<div><img src="imgs_readme/mp4.png"/></div><br/>
 		</li>
 		<li style="border 1px solid"><h4>Save your mp4 files to DiskE</h4>
@@ -120,10 +120,9 @@ video_trigo_all_courses.py ...</h4></br>
 						#define  MATHS_MUSIC_INDEX 0  //[0, 1] because i have only two music
 					</pre>
 				</li>
-					<li>[STEP 2] mount DiskE andG o to ONLY_BOARD/board-ext-geometry.cpp and add your videos to list <pre>const char *EXT_MP4_[MATHS|PHYSIC|CHEMISTRY|PROGRAMMING]_FILES_ARRAY_FROM___BOARD_EXT_GEOMETRY_CPP[]={ }</pre>
-					<img src="imgs/mp4_arrays.png"/><br/>
+					<li>[STEP 2] mount DiskE andG o to ONLY_BOARD/board-ext-geometry.cpp and add your videos to list <pre>const char *EXT_MP4_[MATHS|PHYSIC|CHEMISTRY|PROGRAMMING]_FILES_ARRAY_FROM___BOARD_EXT_GEOMETRY_CPP[]={ }</pre><br/>
 					<pre>You can also add your music in this array: <br/>const char *EXT_MP3_FILES_ARRAY[] =  { }</pre>
-					<img src="imgs/mp3_arrays.png"/><br/>
+					<br/>
 				</li>
 				<li>[STEP 3]: Go to API_MATHS/main.cpp to instanciate your media files(video and/or  music)<br/>Your media files class can have three instance, so if 
 					<ol>
@@ -134,32 +133,8 @@ video_trigo_all_courses.py ...</h4></br>
 							ext::AnimatedSFE_MOVIES mymusic = ext::AnimatedSFE_MOVIES(MATHS_MUSIC_INDEX);
 							</pre>Feel free to instance more han one class if you have many mp4 videos to display inside differents boards<br/>
 							so you will need to declare like:
-							<pre>ext::AnimatedSFE_MOVIES anim_movies1,anim_movies2;</pre>
-							<img src="imgs/main_movie.png" />
-							<div>Here is how to set two mp4-videos for example</div>
-							<img src="imgs/anim_movies2_num1.png"  />
-							<img src="imgs/anim_movies2_num2.png"  />
-							<img src="imgs/anim_movies2_num3.png"  />
+							[Please Read API_MATHS for more details about this party]
 						</li>
-						<li>
-							You're working on Physics, so set your media files like that
-							<pre>ext::AnimatedSFE_MOVIES anim_movies("physic");
-		ext::AnimatedSFE_MOVIES mymusic = ext::AnimatedSFE_MOVIES(MATHS_MUSIC_INDEX);</pre>Feel free to instance more han one class if you have many mp4 videos to display inside differents boards</br>so you will need to declare like:
-							<pre>ext::AnimatedSFE_MOVIES anim_movies1("physic",0),anim_movies2("physic",1);<br/>the first argument is the domain, and the second is the mp4_files index from your mp4 files array:EXT_MP4_[MATHS|PHYSIC|CHEMISTRY|PROGRAMMING]_FILES_ARRAY_FROM___BOARD_EXT_GEOMETRY_CPP[] you fill from ONLY_BOARD/board-ext-geometry.cpp</pre>
-						</li>
-						<li>
-							You're working on Chemistry, so set your media files like that
-							<pre>ext::AnimatedSFE_MOVIES anim_movies("chemistry");
-		ext::AnimatedSFE_MOVIES mymusic = ext::AnimatedSFE_MOVIES(MATHS_MUSIC_INDEX);</pre>Feel free to instance more han one class if you have many mp4 videos to display inside differents boards</br>so you will need to declare like:
-							<pre>ext::AnimatedSFE_MOVIES anim_movies1("chemistry",0),anim_movies2("chemistry",1);<br/>the first argument is the domain, and the second is the mp4_files index from your mp4 files array:EXT_MP4_[MATHS|PHYSIC|CHEMISTRY|PROGRAMMING]_FILES_ARRAY_FROM___BOARD_EXT_GEOMETRY_CPP[] you fill from ONLY_BOARD/board-ext-geometry.cpp</pre>
-						</li>
-						<li>
-							You're working on Programming, so set your media files like that
-							<pre>ext::AnimatedSFE_MOVIES anim_movies("programming");
-		ext::AnimatedSFE_MOVIES mymusic = ext::AnimatedSFE_MOVIES(MATHS_MUSIC_INDEX);</pre>Feel free to instance more han one class if you have many mp4 videos to display inside differents boards</br>so you will need to declare like:
-							<pre>ext::AnimatedSFE_MOVIES anim_movies1("programming",0),anim_movies2("programming",1);<br/>the first argument is the domain, and the second is the mp4_files index from your mp4 files array:EXT_MP4_[MATHS|PHYSIC|CHEMISTRY|PROGRAMMING]_FILES_ARRAY_FROM___BOARD_EXT_GEOMETRY_CPP[] you fill from ONLY_BOARD/board-ext-geometry.cpp</pre>
-						</li>
-						<li><div>Example: Scree_0 dsplay his video like that: </div><img src="imgs/screen0_media.png" /></li>
 					</ol>
 				</li>
 			</ol>
@@ -167,7 +142,7 @@ video_trigo_all_courses.py ...</h4></br>
 		<li>
 			<h4>How To add Images to this API ?: see exaple i did in api-physics[API_PHYSICS/blob/master/ext-geometry.hpp]</h4>
 			<div>You need to set a class in your ext-geometry.hpp (with or namespace) like: mvt_chp_pesanteur::MouvementChampPesenteur</div>
-			<img src="imgs/pesanteur_hpp.png" /><br/>and developp the class method in xt-geometry.cpp like:
+			<br/>and developp the class method in xt-geometry.cpp like:
 			<pre>
 				mvt_chp_pesanteur::MouvementChampPesenteur::MouvementChampPesenteur(){
 				std::string volume_abs_path("/Users/ibrahimatraore/COURSES/API_PHYSICS/images/");

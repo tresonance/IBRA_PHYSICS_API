@@ -2,6 +2,7 @@ obj/
 *.o
 *@
 *__pycache__/
+*pycache*
 imgui.ini
 media/ 
 .cache
