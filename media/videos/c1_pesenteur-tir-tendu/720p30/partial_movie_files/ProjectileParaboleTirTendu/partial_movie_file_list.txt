@@ -1,3 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:/manim/media/videos/c1_pesenteur-tir-tendu/720p30/partial_movie_files/ProjectileParaboleTirTendu/274514146_2523596021_35033455.mp4'
-file 'file:/manim/media/videos/c1_pesenteur-tir-tendu/720p30/partial_movie_files/ProjectileParaboleTirTendu/2789044632_3604166955_1565358222.mp4'

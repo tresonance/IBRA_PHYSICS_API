@@ -142,7 +142,7 @@ then
     if docker images | grep -q $my_manim_image ; then
         echo -e "#####################################################################\n
         #\n\
-        #\t\t [API MATHS] Finish building manim docker image \n\
+        #\t\t [API MATHS] Finish building manim docker image [OR image already exists] \n\
         #\n\
         ##################################################\n"
     else
