@@ -1,3 +1,4 @@
+<p>By Ibrahima TRAORE - Developped in C/C++ Python  - wieh infra Docker</p><hr/>
 <h1 style="border:2px solid; text-align:center;color:blue">API_PHYSICS</h1>
 
 <div><img src="imgs_readme/board1.png" /></div>
@@ -24,7 +25,6 @@ manim_image    latest    b4e1b47b59a2   2 days ago    2.24GB</pre><br/><img src=
 </li>
 <li>Create Libarie libsfe_movie_bin.so (the librari of create_unique_library directory) symbolic link<br/><pre>./run.sh symlink_lib</pre><br/></li>
 <li>To run your API_PHYSICS<br/><pre>make re</pre></li>
-
 <!-- ........................... -->
 <li><h3>MANIM directory (python scripts to build mp4 video)</h3></h4>
 	<ol>
@@ -150,7 +150,7 @@ video_trigo_all_courses.py ...</h4></br>
 			<br/>and developp the class method in xt-geometry.cpp like:
 			<pre>
 				mvt_chp_pesanteur::MouvementChampPesenteur::MouvementChampPesenteur(){
-				std::string volume_abs_path("/Users/ibrahimatraore/COURSES/API_PHYSICS/images/");
+				std::string volume_abs_path("/xxxxxx/xxxxxxxx/COURSES/API_PHYSICS/images/");
 				//std::string path = volume_abs_path + std::string("projection_vecteur.svg");
 				this->counter = -1; 
 				/// WINDOW: 0

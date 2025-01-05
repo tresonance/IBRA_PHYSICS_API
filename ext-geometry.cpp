@@ -6,7 +6,7 @@
 
 
 mvt_chp_pesanteur::MouvementChampPesenteur::MouvementChampPesenteur(){
-    std::string volume_abs_path("/Users/ibrahimatraore/COURSES/API_PHYSICS/images/");
+    std::string volume_abs_path("/xxxxxxxx/xxxxxxxxx/COURSES/API_PHYSICS/images/");
     //std::string path = volume_abs_path + std::string("projection_vecteur.svg");
     this->counter = -1;
 

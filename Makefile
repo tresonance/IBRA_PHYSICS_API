@@ -83,9 +83,9 @@ $(NAME):  $(ONLY_BOARD_OBJ_DIR)board-only.o $(ONLY_BOARD_OBJ_DIR)board-ext-geome
 	@echo "$(MAGENTA) \t\t\t  EXTERN PHYSICS  \033[0m"
 	@echo "$(PURPLE) \t\t\t........................\n \033[0m"
 	@echo "\033[37m ========================================================== \033[0m\n"
-	$(shell export  LD_LIBRARY_PATH=/Users/ibrahimatraore/COURSES/SFE_SFML_IMGUI_LIBS/create_unique_library)
+	$(shell export  LD_LIBRARY_PATH=/xxxxxxx/xxxxxxxxxx/COURSES/SFE_SFML_IMGUI_LIBS/create_unique_library)
 
-	$(shell export  LD_LIBRARY_PATH=/Users/ibrahimatraore/COURSES/SFE_SFML_IMGUI_LIBS/basic_all_in_one)
+	$(shell export  LD_LIBRARY_PATH=/xxxxxxxxx/xxxxxxxxxx/COURSES/SFE_SFML_IMGUI_LIBS/basic_all_in_one)
 	@$(CXX) $(CXXFLAGS) -L`pwd` -l$(SO_LIBRARY_NAME) $(LIBS) -o $(NAME) $(ONLY_BOARD_OBJ_DIR)board-only.o $(ONLY_BOARD_OBJ_DIR)board-ext-geometry.o $(EXT_OBJ_DIR)ext-geometry.o  $(EXT_OBJ_DIR)main.o   && ./$(NAME) 
 
 	@$(CXX) $(CXXFLAGS) -L`pwd` -l$(SO_LIBRARY_NAME) $(LIBS) -o $(NAME) $(ONLY_BOARD_OBJ_DIR)board-only.o $(ONLY_BOARD_OBJ_DIR)board-ext-geometry.o  $(EXT_OBJ_DIR)ext-geometry.o  $(EXT_OBJ_DIR)main.o   && ./$(NAME) 

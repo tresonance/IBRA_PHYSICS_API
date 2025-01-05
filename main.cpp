@@ -177,11 +177,7 @@ int main(){
 
     // #  SET TOP MENU TITLE (Because we cannot set it from GIT_ONLY_BOARD_GPU)   # //
  
-<<<<<<< HEAD
 sc.tm.leconTitle.setString(  "CHAMP DE PESANTEUR " );
-=======
-sc.tm.leconTitle.setString(  );
->>>>>>> b4d4787bc0591ec659eacf656f5fd698061c4498
     sc.tm.domainTitle.setString("[PHYSIQUE]"  );
     sc.tm.domainNiveau.setString( " Tle " );
     /*  UPDATE  ONLY_BOARD THE LEFT MENU CONTAINER COLORS(border and background) */
